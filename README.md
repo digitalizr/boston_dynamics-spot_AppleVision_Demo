@@ -21,7 +21,11 @@ docker exec -it spot_simulation_server bash
 ```
 
 ```sh
-cd ~/spot_ws
+cd ~/spot_ws/src
+git clone https://github.com/Unity-Technologies/ROS-TCP-Endpoint.git
+git clone https://github.com/SoftServeSAG/teleop_legged_robots.git
+apt-get install -y ros-melodic-catkin python-catkin-tools
+cd ..
 catkin_make
 source devel/setup.bash
 hostname -I
