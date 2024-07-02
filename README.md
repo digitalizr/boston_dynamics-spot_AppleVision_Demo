@@ -3,19 +3,22 @@
 go to the docker file add run this:
 
 ```sh
-docker build -t spot_simulation2 .
+docker build -t spot_simulation .
 ```
 
 
 afte that run the image
 
 ```sh
-docker run -it XXXXXXX bash
+docker run --name spot_simulation_server -it -p 10000:10000 spot_ros_simulation 
 ```
 
 
 ## Insid ethe Docker Container
 run this inside the docker container
+```sh
+docker exec -it spot_simulation_server bash
+```
 
 ```sh
 cd ~/spot_ws
